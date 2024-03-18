@@ -14,7 +14,7 @@ public class EnvelopeFollower : MonoBehaviour
     void Start()
     {
         //Bind to the named send object.
-		pdPatch.Bind("envFollow");
+		pdPatch.Bind("AmplitudeEnvelope");
     }
 
 	///	Clean up after ourselves and unbind from the AmplitudeEnvelope object.
@@ -32,8 +32,9 @@ public class EnvelopeFollower : MonoBehaviour
 		//This function will get called for *every* Float event sent by our
 		//patch, so we need to make sure we're only acting on the
 		//*AmplitudeEnvelope* event that we're actually interested in.
-		if(sender == "envFollow")
+		if (sender == "AmplitudeEnvelope")
 		{
+			
 			moveObject.position = new Vector3(moveObject.position.x,
 											  0.5f + value,
 											  moveObject.position.z);
