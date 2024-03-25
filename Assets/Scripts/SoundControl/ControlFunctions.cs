@@ -101,21 +101,28 @@ public static class ControlFunctions
         float S = par.z;
         float R = par.w / 1000;
         float env = 0;
-        if (t < A && gate)
+        if (!gate && t > (A + D + R))
+        {
+            return 0;
+        }
+            
+        else if (t < A && gate)
         {
             env = t / A;
         }
-        else if (t > A  && gate)
+        else if (t > A && t < (A+D) && gate)
         {
             env = Mathf.Lerp(1, S, (t - A) / D);
         }
-        else if ( !gate && t < R)
+        else if (t > (A + D) && gate)
+        {
+            env = S;
+        }
+        else if (!gate && t < R)
         {
             env = Mathf.Lerp(S, 0, t / R);
         }
-        else
-            return -1;
-        return env*env;
+        return env;
     }
 
 }

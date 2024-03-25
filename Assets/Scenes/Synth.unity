@@ -484,6 +484,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patch: {fileID: 1550565718}
+  beat: 500
+  A: 86
+  D: 250
+  S: 0.734
+  R: 354
 --- !u!135 &1550565721
 SphereCollider:
   m_ObjectHideFlags: 0
