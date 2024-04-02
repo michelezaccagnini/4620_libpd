@@ -238,9 +238,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patch: {fileID: 888461157}
-  toggle: 0
   kick: 010001010001
   snare: 0000000000
+  sounds:
+  - {fileID: 8300000, guid: ebca7e6bae6786c4ab899ab143ffb11f, type: 3}
+  - {fileID: 8300000, guid: 5bcb143b726d40b45a1c4eeb8469d405, type: 3}
+  - {fileID: 8300000, guid: d0b9eac3e3f6bed498306c9ef9425a95, type: 3}
 --- !u!114 &888461157
 MonoBehaviour:
   m_ObjectHideFlags: 0
