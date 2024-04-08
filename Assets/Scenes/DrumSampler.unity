@@ -234,16 +234,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 888461155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f5db0f784bc095448429a59edc269d2, type: 3}
+  m_Script: {fileID: 11500000, guid: e20ccb2914b3e374c953584fd08f6da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patch: {fileID: 888461157}
-  kick: 010001010001
-  snare: 0000000000
+  beat: 1000
+  pdPatch: {fileID: 888461157}
+  kick: 01000100
+  snare: 01010001
+  cymbal: 00000000
   sounds:
-  - {fileID: 8300000, guid: ebca7e6bae6786c4ab899ab143ffb11f, type: 3}
-  - {fileID: 8300000, guid: 5bcb143b726d40b45a1c4eeb8469d405, type: 3}
-  - {fileID: 8300000, guid: d0b9eac3e3f6bed498306c9ef9425a95, type: 3}
+  - {fileID: 8300000, guid: 883dfa376cd916b41b275a63a80a0782, type: 3}
+  - {fileID: 8300000, guid: e2e6cf51ffc7fae4c838a7a7c0ff0710, type: 3}
+  - {fileID: 8300000, guid: 443eac2358147384292306fac42f709d, type: 3}
 --- !u!114 &888461157
 MonoBehaviour:
   m_ObjectHideFlags: 0
