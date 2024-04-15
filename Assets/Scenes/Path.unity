@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec3ad0d6148cf9458717b55181205b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drumSeq: {fileID: 0}
+  drumSeq: {fileID: 780789163}
   pathSpeed: 1
   pathSize: 5
 --- !u!4 &572824336
@@ -354,11 +354,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beat: 1000
   pdPatch: {fileID: 780789161}
-  kick: 01000100
-  snare: 00000000
+  kick: 00010000010000
+  snare: 00000000000000
   sounds:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 883dfa376cd916b41b275a63a80a0782, type: 3}
+  - {fileID: 8300000, guid: ae5b242296aba4e468435dd0d62319c6, type: 3}
   cameraShake: 0
 --- !u!4 &780789164
 Transform:
