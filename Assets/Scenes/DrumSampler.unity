@@ -239,8 +239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beat: 1000
   pdPatch: {fileID: 888461157}
-  kick: 01000100
-  snare: 01010001
+  kick: 01000001
+  snare: 00010100
   cymbal: 00000000
   sounds:
   - {fileID: 8300000, guid: 883dfa376cd916b41b275a63a80a0782, type: 3}

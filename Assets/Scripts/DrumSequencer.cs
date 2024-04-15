@@ -21,6 +21,8 @@ public class DrumSequencer : MonoBehaviour
     List<bool>[] gates = new List<bool>[3];
     Vector4 adsr_params;
     GameObject[] StepsObjs;
+    [HideInInspector]
+    public float cameraShake;
     void Start()
     {
         envelopes = new List<float>();
@@ -43,22 +45,6 @@ public class DrumSequencer : MonoBehaviour
         adsr_params = new Vector4(100, 150, .8f, 500);
         
     }
-    IEnumerator SendMidi(int count)
-    {
-        if (kick[count])
-        {
-            pdPatch.SendBang("kick_bang");
-        }
-        if (snare[count])
-        {
-            pdPatch.SendBang("snare_bang");
-        }
-        if (cymbal[count])
-        {
-            pdPatch.SendBang("cymbal_bang");
-        }
-        yield return null;
-    }
 
 
     void Update()
@@ -72,9 +58,24 @@ public class DrumSequencer : MonoBehaviour
         {
             envelopes[i] = ControlFunctions.ADSR(ramp/1000, gates[i][count], adsr_params);
         }
+        if(gates[0][count])
+        {
+            cameraShake = ControlFunctions.ADSR(ramp / 1000, true, adsr_params);
+        }
         if (trig)
         {
-            StartCoroutine(SendMidi(count));
+            if (kick[count])
+            {
+                pdPatch.SendBang("kick_bang");
+            }
+            if (snare[count])
+            {
+                pdPatch.SendBang("snare_bang");
+            }
+            if (cymbal[count])
+            {
+                pdPatch.SendBang("cymbal_bang");
+            }
             count = (count + 1) % kick.Count;
 
         }

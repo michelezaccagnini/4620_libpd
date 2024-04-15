@@ -125,4 +125,11 @@ public static class ControlFunctions
         return env;
     }
 
+    public static Vector3 Path(float time, float freq, float ampl)
+    {
+        Vector2 xz = new Vector2(Mathf.Cos(time *freq), 
+                        Mathf.Sin(time*freq) );
+        float perlin = Mathf.PerlinNoise(xz.x, xz.y);
+        return new Vector3(xz.x+perlin, perlin, xz.y+perlin) * ampl;
+    }
 }
