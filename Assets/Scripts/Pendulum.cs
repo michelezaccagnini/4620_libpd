@@ -42,8 +42,6 @@ public class Pendulum : MonoBehaviour
                 left_edge = true;
             else if (delta < prev_delta)
                 right_edge = true;
-            else
-                middle = true;
             if (left_edge) Debug.Log("left");
             if (right_edge) Debug.Log("right");
             
