@@ -28,8 +28,11 @@
 #X obj -23 -15 t b f;
 #X obj 29 -13 / 127;
 #X obj -65 129 osc~;
-#X obj -65 153 *~;
+#X obj -56 168 *~;
 #X obj -60 281 dac~;
+#X obj 65 141 adc~;
+#X obj -55 213 *~;
+#X obj 37 204 *~;
 #X connect 0 0 1 0;
 #X connect 0 1 7 0;
 #X connect 1 0 9 0;
@@ -45,5 +48,9 @@
 #X connect 7 1 8 0;
 #X connect 8 0 3 1;
 #X connect 9 0 10 0;
-#X connect 10 0 11 0;
-#X connect 10 0 11 1;
+#X connect 10 0 13 0;
+#X connect 10 0 14 0;
+#X connect 12 0 13 1;
+#X connect 12 1 14 1;
+#X connect 13 0 11 0;
+#X connect 14 0 11 1;

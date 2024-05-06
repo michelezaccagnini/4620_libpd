@@ -44,6 +44,6 @@ public class SoundObject : MonoBehaviour
         
         bool gate = ramp < gate_len/100f;
         float adsr = ControlFunctions.ADSR((float)ramp / beat, gate, adsr_par);
-        transform.position = new Vector3(0, adsr, 0);
+        transform.position = new Vector3(Mathf.Cos(t), adsr, Mathf.Sin(t));
     }
 }
